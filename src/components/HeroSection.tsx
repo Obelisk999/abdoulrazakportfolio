@@ -51,7 +51,7 @@ export const HeroSection = () => {
             {/* Social Links */}
             <div className="flex items-center justify-center lg:justify-start gap-4 mb-8 animate-slideUp" style={{ animationDelay: "0.2s" }}>
               <a
-                href="https://github.com/abdoulrazakhoussein"
+                href="https://github.com/Obelisk999"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-full bg-secondary hover:bg-secondary/70 transition-colors duration-200"
@@ -60,7 +60,7 @@ export const HeroSection = () => {
                 <Github className="w-5 h-5" />
               </a>
               <a
-                href="https://linkedin.com/in/abdoulrazakhoussein"
+                href="https://www.linkedin.com/in/abdourazak-houssein-a91b67291/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-full bg-secondary hover:bg-secondary/70 transition-colors duration-200"

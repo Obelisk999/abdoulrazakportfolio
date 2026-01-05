@@ -30,12 +30,12 @@ const socialLinks = [
   {
     icon: Github,
     label: "GitHub",
-    href: "https://github.com/abdoulrazakhoussein",
+    href: "https://github.com/Obelisk999",
   },
   {
     icon: Linkedin,
     label: "LinkedIn",
-    href: "https://linkedin.com/in/abdoulrazakhoussein",
+    href: "https://www.linkedin.com/in/abdourazak-houssein-a91b67291/",
   },
 ];
 
