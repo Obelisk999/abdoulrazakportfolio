@@ -62,6 +62,28 @@ This project is built with:
 
 ## How can I deploy this project?
 
+### Deploy to GitHub Pages
+
+This project is configured to automatically deploy to GitHub Pages when changes are pushed to the `main` branch.
+
+**Automatic Deployment:**
+1. Push your changes to the `main` branch
+2. GitHub Actions will automatically build and deploy your site
+3. Your site will be available at: `https://obelisk999.github.io/abdoulrazakportfolio/`
+
+**Manual Deployment:**
+You can also trigger a deployment manually:
+1. Go to the "Actions" tab in your GitHub repository
+2. Select the "Deploy to GitHub Pages" workflow
+3. Click "Run workflow"
+
+**First-time Setup:**
+To enable GitHub Pages for the first time:
+1. Go to your repository Settings
+2. Navigate to Pages (under "Code and automation")
+3. Under "Build and deployment", select Source: "GitHub Actions"
+
+**Alternative: Deploy to Lovable**
 Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
 
 ## Can I connect a custom domain to my Lovable project?
