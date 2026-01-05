@@ -9,14 +9,14 @@ const contactInfo = [
   {
     icon: Phone,
     label: "Téléphone",
-    value: "+253 XX XX XX XX",
-    href: "tel:+253XXXXXXXX",
+    value: "+253 77 15 55 66",
+    href: "tel:+25377155566",
   },
   {
     icon: Mail,
     label: "Email",
-    value: "abdoulrazak.houssein@example.com",
-    href: "mailto:abdoulrazak.houssein@example.com",
+    value: "abdoulrazak.work@gmail.com",
+    href: "mailto:abdoulrazak.work@gmail.com",
   },
   {
     icon: MapPin,

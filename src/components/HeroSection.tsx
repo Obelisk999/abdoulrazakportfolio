@@ -45,7 +45,7 @@ export const HeroSection = () => {
               <span className="text-gradient">Houssein</span>
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 animate-slideUp" style={{ animationDelay: "0.1s" }}>
-              Informaticien | Passionné d'Intelligence Artificielle et Développement Web
+              Informaticien | Étudiant en Master 1 Intelligence Artificielle
             </p>
             
             {/* Social Links */}
@@ -69,7 +69,7 @@ export const HeroSection = () => {
                 <Linkedin className="w-5 h-5" />
               </a>
               <a
-                href="mailto:abdoulrazak.houssein@example.com"
+                href="mailto:abdoulrazak.work@gmail.com"
                 className="p-3 rounded-full bg-secondary hover:bg-secondary/70 transition-colors duration-200"
                 aria-label="Email"
               >

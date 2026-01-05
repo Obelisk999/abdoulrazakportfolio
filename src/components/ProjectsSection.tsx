@@ -1,17 +1,17 @@
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Github, Calendar, Users, Database, Bot } from "lucide-react";
+import { ExternalLink, Github, Calendar, Bot, BarChart3 } from "lucide-react";
 
 const projects = [
   {
     title: "Application de Réservation de Salles",
     description:
-      "Application web complète permettant la gestion et la réservation de salles de réunion. Système d'authentification sécurisé, gestion des disponibilités en temps réel et notifications par email automatiques.",
-    technologies: ["Flask", "MySQL", "Bootstrap", "Python"],
+      "Conception et développement d'une application web permettant la création et la réservation de salles. Développement backend avec Flask (Python) et base de données MySQL.",
+    technologies: ["Flask", "MySQL", "Bootstrap", "Python", "HTML/CSS/JS"],
     features: [
-      "Authentification utilisateur sécurisée",
-      "Gestion des salles et disponibilités",
-      "Système de réservation intuitif",
-      "Notifications email automatiques",
+      "Authentification et gestion des rôles",
+      "Gestion des salles et réservations",
+      "Notifications automatiques par email",
+      "Interface responsive Bootstrap",
     ],
     icon: Calendar,
     color: "from-blue-500 to-cyan-500",
@@ -19,16 +19,30 @@ const projects = [
   {
     title: "Gestion de Projets avec IA",
     description:
-      "Plateforme de gestion de projets intégrant l'intelligence artificielle pour automatiser la création de cahiers des charges. Gestion complète des projets, tâches et équipes avec génération automatique de documentation.",
-    technologies: ["Python", "Flask", "LLM", "MySQL", "Bootstrap"],
+      "Développement d'une application web de gestion de projets, tâches, équipes et échéances. Intégration d'un module d'intelligence artificielle pour la génération automatique de cahiers des charges.",
+    technologies: ["Python", "Flask", "LLM", "MySQL"],
     features: [
       "Gestion projets, tâches et équipes",
       "Génération automatique de cahiers des charges",
       "Intégration de modèles de langage",
-      "Tableau de bord analytique",
+      "Structuration des données et logique métier",
     ],
     icon: Bot,
     color: "from-purple-500 to-pink-500",
+  },
+  {
+    title: "Analyse des habitudes d'écoute Spotify",
+    description:
+      "Analyse d'un jeu de données Spotify représentant les habitudes d'écoute d'un utilisateur sur 2 années. Conception de tableaux de bord interactifs avec Power BI.",
+    technologies: ["Python", "Pandas", "Power BI", "Data Analysis"],
+    features: [
+      "Nettoyage et préparation des données",
+      "Tableaux de bord interactifs Power BI",
+      "Analyse des tendances d'écoute",
+      "Création d'indicateurs clés (KPI)",
+    ],
+    icon: BarChart3,
+    color: "from-green-500 to-emerald-500",
   },
 ];
 

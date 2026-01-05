@@ -1,16 +1,32 @@
-import { Code, Database, Monitor, Shield, Brain } from "lucide-react";
+import { Code, Database, Monitor, Brain, BarChart3 } from "lucide-react";
 
 const skillCategories = [
+  {
+    icon: Brain,
+    title: "Python & IA",
+    skills: [
+      { name: "Python (Flask, Pandas)", level: 85 },
+      { name: "NLP & Modèles de langage", level: 75 },
+      { name: "Analyse de données", level: 80 },
+    ],
+  },
+  {
+    icon: BarChart3,
+    title: "Data & Visualisation",
+    skills: [
+      { name: "Power BI", level: 80 },
+      { name: "Nettoyage de données", level: 85 },
+      { name: "Tableaux de bord", level: 80 },
+    ],
+  },
   {
     icon: Code,
     title: "Développement Web",
     skills: [
-      { name: "HTML", level: 95 },
-      { name: "CSS", level: 90 },
+      { name: "HTML/CSS", level: 90 },
       { name: "JavaScript", level: 85 },
-      { name: "Bootstrap", level: 85 },
       { name: "PHP", level: 75 },
-      { name: "Flask", level: 80 },
+      { name: "Bootstrap", level: 85 },
     ],
   },
   {
@@ -18,8 +34,7 @@ const skillCategories = [
     title: "Bases de données",
     skills: [
       { name: "MySQL", level: 85 },
-      { name: "Merise", level: 80 },
-      { name: "MCD/MLD", level: 85 },
+      { name: "Modélisation (Merise, MCD, MLD)", level: 80 },
     ],
   },
   {
@@ -28,23 +43,6 @@ const skillCategories = [
     skills: [
       { name: "Linux", level: 80 },
       { name: "Windows", level: 90 },
-    ],
-  },
-  {
-    icon: Shield,
-    title: "Réseaux & Sécurité",
-    skills: [
-      { name: "Réseaux informatiques", level: 75 },
-      { name: "Sécurité informatique", level: 70 },
-    ],
-  },
-  {
-    icon: Brain,
-    title: "Intelligence Artificielle",
-    skills: [
-      { name: "NLP", level: 70 },
-      { name: "Modèles de langage", level: 75 },
-      { name: "Python", level: 80 },
     ],
   },
 ];
