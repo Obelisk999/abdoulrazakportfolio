@@ -21,7 +21,7 @@ const education = [
 
 export const EducationSection = () => {
   return (
-    <section id="education" className="py-20 md:py-32 bg-card">
+    <section id="education" className="py-20 md:py-32 bg-background">
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <p className="text-primary font-medium mb-4">Mon parcours</p>
@@ -55,7 +55,7 @@ export const EducationSection = () => {
 
               {/* Content */}
               <div className={`flex-1 ml-12 md:ml-0 ${index % 2 === 0 ? "md:pr-12" : "md:pl-12"}`}>
-                <div className="p-6 rounded-2xl bg-background border border-border/50 hover:border-primary/30 transition-all duration-300 hover:glow-primary">
+                <div className="p-6 rounded-2xl bg-card border border-border/50 hover:border-primary/30 transition-all duration-300 hover:shadow-lg">
                   {/* Period badge */}
                   <div className="flex items-center gap-2 mb-4">
                     <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary text-sm font-medium">
@@ -71,8 +71,8 @@ export const EducationSection = () => {
 
                   {/* Title and institution */}
                   <div className="flex items-start gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-lg bg-gradient-primary flex items-center justify-center shrink-0">
-                      <GraduationCap className="w-5 h-5 text-primary-foreground" />
+                    <div className="w-10 h-10 rounded-lg bg-gradient-to-r from-primary to-accent flex items-center justify-center shrink-0">
+                      <GraduationCap className="w-5 h-5 text-white" />
                     </div>
                     <div>
                       <h3 className="font-display font-semibold text-lg">{item.title}</h3>

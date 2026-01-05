@@ -25,7 +25,7 @@ const highlights = [
 
 export const AboutSection = () => {
   return (
-    <section id="apropos" className="py-20 md:py-32 bg-background">
+    <section id="apropos" className="py-20 md:py-32 bg-card/50">
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <p className="text-primary font-medium mb-4">À propos de moi</p>
@@ -49,11 +49,11 @@ export const AboutSection = () => {
           {highlights.map((item, index) => (
             <div
               key={item.title}
-              className="group p-6 rounded-2xl bg-gradient-card border border-border/50 hover:border-primary/50 transition-all duration-300 hover:glow-primary"
+              className="group p-6 rounded-2xl bg-card border border-border/50 hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="w-12 h-12 rounded-xl bg-gradient-primary flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                <item.icon className="w-6 h-6 text-primary-foreground" />
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-primary to-accent flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                <item.icon className="w-6 h-6 text-white" />
               </div>
               <h3 className="font-display font-semibold text-lg mb-2">{item.title}</h3>
               <p className="text-sm text-muted-foreground">{item.description}</p>

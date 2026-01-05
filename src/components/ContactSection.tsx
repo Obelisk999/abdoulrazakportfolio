@@ -71,7 +71,7 @@ export const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-20 md:py-32 bg-card">
+    <section id="contact" className="py-20 md:py-32 bg-card/50">
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <p className="text-primary font-medium mb-4">Restons en contact</p>
@@ -93,10 +93,10 @@ export const ContactSection = () => {
               {contactInfo.map((info) => (
                 <div
                   key={info.label}
-                  className="flex items-center gap-4 p-4 rounded-xl bg-background border border-border/50"
+                  className="flex items-center gap-4 p-4 rounded-xl bg-card border border-border/50 shadow-sm"
                 >
-                  <div className="w-12 h-12 rounded-lg bg-gradient-primary flex items-center justify-center shrink-0">
-                    <info.icon className="w-5 h-5 text-primary-foreground" />
+                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-primary to-accent flex items-center justify-center shrink-0">
+                    <info.icon className="w-5 h-5 text-white" />
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">{info.label}</p>
@@ -124,7 +124,7 @@ export const ContactSection = () => {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-4 py-3 rounded-xl bg-background border border-border/50 hover:border-primary/50 hover:bg-secondary/50 transition-all duration-300"
+                  className="flex items-center gap-2 px-4 py-3 rounded-xl bg-card border border-border/50 hover:border-primary/30 hover:shadow-md transition-all duration-300"
                 >
                   <link.icon className="w-5 h-5" />
                   <span className="font-medium">{link.label}</span>
@@ -134,7 +134,7 @@ export const ContactSection = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="p-8 rounded-2xl bg-background border border-border/50">
+          <div className="p-8 rounded-2xl bg-card border border-border/50 shadow-lg">
             <h3 className="font-display text-xl font-semibold mb-6">Envoyez-moi un message</h3>
             
             <form onSubmit={handleSubmit} className="space-y-6">
