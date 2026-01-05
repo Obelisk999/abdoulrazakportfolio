@@ -34,12 +34,14 @@ export const AboutSection = () => {
             <span className="text-gradient">l'innovation</span>
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Étudiant en informatique à l'Université de Djibouti, je suis passionné par 
-            l'intelligence artificielle et le développement web. Mon objectif est de 
-            concevoir des solutions innovantes qui allient performance technique et 
-            expérience utilisateur optimale. Je m'investis particulièrement dans 
-            l'intégration de modèles de langage et le traitement automatique du langage 
-            naturel pour créer des applications intelligentes et intuitives.
+            Étudiant en Master 1 Intelligence Artificielle et Modélisation des Données, 
+            titulaire d'une licence en informatique, passionné par le développement 
+            d'applications web et l'intelligence artificielle. J'ai réalisé plusieurs 
+            projets académiques utilisant Flask, MySQL et des concepts d'IA, notamment 
+            la génération automatique de cahiers des charges à l'aide de modèles de langage. 
+            Motivé, curieux et doté d'une bonne capacité d'apprentissage, je recherche un 
+            stage ou un premier emploi afin de mettre en pratique mes compétences techniques 
+            et de contribuer activement à des projets innovants.
           </p>
         </div>
 

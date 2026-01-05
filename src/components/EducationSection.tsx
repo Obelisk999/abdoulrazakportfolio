@@ -2,19 +2,19 @@ import { GraduationCap, Award, Calendar } from "lucide-react";
 
 const education = [
   {
+    period: "2025 – En cours",
+    title: "Master 1 - Intelligence Artificielle & Modélisation des Données",
+    institution: "Université de Djibouti",
+    description: "Formation avancée en intelligence artificielle, modélisation des données et apprentissage automatique.",
+    achievement: "En cours",
+    current: true,
+  },
+  {
     period: "2022 – 2025",
     title: "Licence en Informatique",
     institution: "Université de Djibouti",
     description: "Formation complète en informatique couvrant la programmation, les bases de données, les réseaux et l'intelligence artificielle.",
     achievement: "Mention Bien",
-    current: true,
-  },
-  {
-    period: "2019 – 2022",
-    title: "Baccalauréat Série Scientifique",
-    institution: "Lycée d'État de Djibouti",
-    description: "Formation scientifique rigoureuse en mathématiques, physique et sciences de la vie et de la terre.",
-    achievement: "Mention Très Bien",
     current: false,
   },
 ];
