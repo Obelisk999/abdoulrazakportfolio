@@ -1,4 +1,4 @@
-import { Languages } from "lucide-react";
+import { AnimatedSection, AnimatedCard } from "./AnimatedSection";
 
 const languages = [
   { name: "Somali", level: 100, description: "Langue maternelle" },
@@ -9,63 +9,61 @@ const languages = [
 
 export const LanguagesSection = () => {
   return (
-    <section className="py-20 md:py-32 bg-background">
+    <section className="py-16 sm:py-20 md:py-32 bg-card/50">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="max-w-3xl mx-auto text-center mb-16">
-          <p className="text-primary font-medium mb-4">Communication</p>
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+        <AnimatedSection className="max-w-3xl mx-auto text-center mb-12 sm:mb-16">
+          <p className="text-primary font-medium mb-3 sm:mb-4 text-sm sm:text-base">Communication</p>
+          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
             <span className="text-gradient">Langues</span> parlées
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-base sm:text-lg text-muted-foreground px-2">
             Une maîtrise multilingue qui me permet de communiquer efficacement dans un contexte international.
           </p>
-        </div>
+        </AnimatedSection>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6 max-w-5xl mx-auto">
           {languages.map((language, index) => (
-            <div
-              key={language.name}
-              className="group p-6 rounded-2xl bg-card border border-border/50 hover:border-primary/30 transition-all duration-300 text-center hover:shadow-lg"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              {/* Circular progress */}
-              <div className="relative w-24 h-24 mx-auto mb-4">
-                <svg className="w-24 h-24 transform -rotate-90">
-                  <circle
-                    cx="48"
-                    cy="48"
-                    r="40"
-                    stroke="currentColor"
-                    strokeWidth="8"
-                    fill="none"
-                    className="text-muted"
-                  />
-                  <circle
-                    cx="48"
-                    cy="48"
-                    r="40"
-                    stroke="url(#gradient)"
-                    strokeWidth="8"
-                    fill="none"
-                    strokeLinecap="round"
-                    strokeDasharray={`${language.level * 2.51} 251`}
-                    className="transition-all duration-1000 ease-out"
-                  />
-                  <defs>
-                    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                      <stop offset="0%" stopColor="hsl(217 91% 55%)" />
-                      <stop offset="100%" stopColor="hsl(199 89% 48%)" />
-                    </linearGradient>
-                  </defs>
-                </svg>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-lg font-bold">{language.level}%</span>
+            <AnimatedCard key={language.name} delay={index * 0.1}>
+              <div className="group p-4 sm:p-6 rounded-2xl bg-card border border-border/50 hover:border-primary/30 transition-all duration-300 text-center hover:shadow-lg h-full">
+                {/* Circular progress */}
+                <div className="relative w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 mx-auto mb-3 sm:mb-4">
+                  <svg className="w-full h-full transform -rotate-90">
+                    <circle
+                      cx="50%"
+                      cy="50%"
+                      r="40%"
+                      stroke="currentColor"
+                      strokeWidth="8"
+                      fill="none"
+                      className="text-muted"
+                    />
+                    <circle
+                      cx="50%"
+                      cy="50%"
+                      r="40%"
+                      stroke="url(#gradient)"
+                      strokeWidth="8"
+                      fill="none"
+                      strokeLinecap="round"
+                      strokeDasharray={`${language.level * 2.51} 251`}
+                      className="transition-all duration-1000 ease-out"
+                    />
+                    <defs>
+                      <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stopColor="hsl(217 91% 55%)" />
+                        <stop offset="100%" stopColor="hsl(199 89% 48%)" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <span className="text-sm sm:text-base lg:text-lg font-bold">{language.level}%</span>
+                  </div>
                 </div>
-              </div>
 
-              <h3 className="font-display font-semibold text-lg mb-1">{language.name}</h3>
-              <p className="text-sm text-muted-foreground">{language.description}</p>
-            </div>
+                <h3 className="font-display font-semibold text-sm sm:text-base lg:text-lg mb-0.5 sm:mb-1">{language.name}</h3>
+                <p className="text-[10px] sm:text-xs lg:text-sm text-muted-foreground">{language.description}</p>
+              </div>
+            </AnimatedCard>
           ))}
         </div>
       </div>
