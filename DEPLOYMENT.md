@@ -12,6 +12,7 @@ This document explains how to publish your portfolio website on GitHub Pages.
 ### Step 1: Enable GitHub Pages
 
 1. Go to your repository on GitHub: `https://github.com/Obelisk999/abdoulrazakportfolio`
+   (or navigate to your repository URL)
 2. Click on **Settings** (top navigation)
 3. In the left sidebar, click on **Pages** (under "Code and automation")
 4. Under **Build and deployment**:
