@@ -25,7 +25,7 @@ export const LanguagesSection = () => {
           {languages.map((language, index) => (
             <div
               key={language.name}
-              className="group p-6 rounded-2xl bg-gradient-card border border-border/50 hover:border-primary/50 transition-all duration-300 text-center"
+              className="group p-6 rounded-2xl bg-card border border-border/50 hover:border-primary/30 transition-all duration-300 text-center hover:shadow-lg"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Circular progress */}
@@ -53,8 +53,8 @@ export const LanguagesSection = () => {
                   />
                   <defs>
                     <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                      <stop offset="0%" stopColor="hsl(250 84% 65%)" />
-                      <stop offset="100%" stopColor="hsl(280 70% 60%)" />
+                      <stop offset="0%" stopColor="hsl(217 91% 55%)" />
+                      <stop offset="100%" stopColor="hsl(199 89% 48%)" />
                     </linearGradient>
                   </defs>
                 </svg>

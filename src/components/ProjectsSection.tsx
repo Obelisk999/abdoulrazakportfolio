@@ -51,7 +51,7 @@ const projects = [
 
 export const ProjectsSection = () => {
   return (
-    <section id="projets" className="py-20 md:py-32 bg-background">
+    <section id="projets" className="py-20 md:py-32 bg-card/50">
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <p className="text-primary font-medium mb-4">Mes réalisations</p>
@@ -69,7 +69,7 @@ export const ProjectsSection = () => {
           {projects.map((project, index) => (
             <div
               key={project.title}
-              className="group relative rounded-2xl overflow-hidden border border-border/50 hover:border-primary/50 transition-all duration-500 bg-gradient-card"
+              className="group relative rounded-2xl overflow-hidden border border-border/50 hover:border-primary/30 transition-all duration-500 bg-card hover:shadow-xl hover:-translate-y-1"
             >
               {/* Header with gradient */}
               <div className={`h-2 bg-gradient-to-r ${project.color}`} />

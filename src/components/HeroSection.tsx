@@ -13,22 +13,22 @@ export const HeroSection = () => {
   return (
     <section
       id="accueil"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-hero pt-20"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-background via-secondary/30 to-background pt-20"
     >
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse-slow" />
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accent/10 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: "2s" }} />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-border/20 rounded-full" />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] border border-border/10 rounded-full" />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse-slow" />
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accent/5 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: "2s" }} />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-primary/10 rounded-full" />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] border border-primary/5 rounded-full" />
       </div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
           {/* Photo */}
           <div className="relative group">
-            <div className="absolute -inset-1 bg-gradient-primary rounded-full blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-500" />
-            <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-secondary">
+            <div className="absolute -inset-2 bg-gradient-to-r from-primary to-accent rounded-full blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-500" />
+            <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-card shadow-2xl">
               <img
                 src={profilePhoto}
                 alt="Abdoulrazak Houssein"
@@ -54,26 +54,26 @@ export const HeroSection = () => {
                 href="https://github.com/Obelisk999"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 rounded-full bg-secondary hover:bg-secondary/70 transition-colors duration-200"
+                className="p-3 rounded-full bg-card shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-200 border border-border/50"
                 aria-label="GitHub"
               >
-                <Github className="w-5 h-5" />
+                <Github className="w-5 h-5 text-foreground" />
               </a>
               <a
                 href="https://www.linkedin.com/in/abdourazak-houssein-a91b67291/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 rounded-full bg-secondary hover:bg-secondary/70 transition-colors duration-200"
+                className="p-3 rounded-full bg-card shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-200 border border-border/50"
                 aria-label="LinkedIn"
               >
-                <Linkedin className="w-5 h-5" />
+                <Linkedin className="w-5 h-5 text-primary" />
               </a>
               <a
                 href="mailto:abdoulrazak.work@gmail.com"
-                className="p-3 rounded-full bg-secondary hover:bg-secondary/70 transition-colors duration-200"
+                className="p-3 rounded-full bg-card shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-200 border border-border/50"
                 aria-label="Email"
               >
-                <Mail className="w-5 h-5" />
+                <Mail className="w-5 h-5 text-accent" />
               </a>
             </div>
 

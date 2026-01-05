@@ -49,7 +49,7 @@ const skillCategories = [
 
 export const SkillsSection = () => {
   return (
-    <section id="competences" className="py-20 md:py-32 bg-card">
+    <section id="competences" className="py-20 md:py-32 bg-background">
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <p className="text-primary font-medium mb-4">Mes compétences</p>
@@ -67,12 +67,12 @@ export const SkillsSection = () => {
           {skillCategories.map((category, categoryIndex) => (
             <div
               key={category.title}
-              className="p-6 rounded-2xl bg-background border border-border/50 hover:border-primary/30 transition-all duration-300"
+              className="p-6 rounded-2xl bg-card border border-border/50 hover:border-primary/30 transition-all duration-300 hover:shadow-lg"
               style={{ animationDelay: `${categoryIndex * 0.1}s` }}
             >
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded-lg bg-gradient-primary flex items-center justify-center">
-                  <category.icon className="w-5 h-5 text-primary-foreground" />
+                <div className="w-10 h-10 rounded-lg bg-gradient-to-r from-primary to-accent flex items-center justify-center">
+                  <category.icon className="w-5 h-5 text-white" />
                 </div>
                 <h3 className="font-display font-semibold text-lg">{category.title}</h3>
               </div>
@@ -86,7 +86,7 @@ export const SkillsSection = () => {
                     </div>
                     <div className="h-2 bg-muted rounded-full overflow-hidden">
                       <div
-                        className="h-full bg-gradient-primary rounded-full transition-all duration-1000 ease-out"
+                        className="h-full bg-gradient-to-r from-primary to-accent rounded-full transition-all duration-1000 ease-out"
                         style={{ width: `${skill.level}%` }}
                       />
                     </div>
