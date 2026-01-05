@@ -15,6 +15,7 @@ const projects = [
     ],
     icon: Calendar,
     color: "from-blue-500 to-cyan-500",
+    github: "https://github.com/Obelisk999/RoomReserve",
   },
   {
     title: "Gestion de Projets avec IA",
@@ -29,6 +30,7 @@ const projects = [
     ],
     icon: Bot,
     color: "from-purple-500 to-pink-500",
+    github: "https://github.com/haki24gamer/Mashru3",
   },
   {
     title: "Analyse des habitudes d'écoute Spotify",
@@ -43,6 +45,7 @@ const projects = [
     ],
     icon: BarChart3,
     color: "from-green-500 to-emerald-500",
+    github: null,
   },
 ];
 
@@ -114,14 +117,14 @@ export const ProjectsSection = () => {
 
                 {/* Actions */}
                 <div className="flex gap-3">
-                  <Button variant="glass" size="sm">
-                    <Github className="w-4 h-4" />
-                    Code source
-                  </Button>
-                  <Button variant="outline" size="sm">
-                    <ExternalLink className="w-4 h-4" />
-                    Voir le projet
-                  </Button>
+                  {project.github && (
+                    <a href={project.github} target="_blank" rel="noopener noreferrer">
+                      <Button variant="glass" size="sm">
+                        <Github className="w-4 h-4" />
+                        Code source
+                      </Button>
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
