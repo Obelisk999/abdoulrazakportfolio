@@ -1,9 +1,9 @@
 import { Languages } from "lucide-react";
 
 const languages = [
-  { name: "Français", level: 95, description: "Langue maternelle" },
+  { name: "Somali", level: 100, description: "Langue maternelle" },
+  { name: "Français", level: 95, description: "Courant" },
   { name: "Arabe", level: 85, description: "Courant" },
-  { name: "Somali", level: 90, description: "Courant" },
   { name: "Anglais", level: 70, description: "Intermédiaire avancé" },
 ];
 
