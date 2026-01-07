@@ -16,7 +16,7 @@ export const translations = {
     hero: {
       welcome: "Bienvenue sur mon portfolio",
       name: "Abdoulrazak Houssein",
-      title: "Informaticien | Étudiant en Master 1 Intelligence Artificielle",
+      title: "Informaticien | Étudiant en Licence Informatique",
       contactMe: "Me Contacter",
       downloadCV: "Télécharger CV",
       discover: "Découvrir",
@@ -27,7 +27,7 @@ export const translations = {
       subtitle: "À propos de moi",
       title: "Un développeur passionné par",
       titleHighlight: "l'innovation",
-      description: "Étudiant en Master 1 Intelligence Artificielle et Modélisation des Données, titulaire d'une licence en informatique, passionné par le développement d'applications web et l'intelligence artificielle. J'ai réalisé plusieurs projets académiques utilisant Flask, MySQL et des concepts d'IA, notamment la génération automatique de cahiers des charges à l'aide de modèles de langage. Motivé, curieux et doté d'une bonne capacité d'apprentissage, je recherche un stage ou un premier emploi afin de mettre en pratique mes compétences techniques et de contribuer activement à des projets innovants.",
+      description: "Étudiant en Licence Informatique, passionné par le développement d'applications web et l'intelligence artificielle. J'ai réalisé plusieurs projets académiques utilisant Flask, MySQL et des concepts d'IA, notamment la génération automatique de cahiers des charges à l'aide de modèles de langage. Motivé, curieux et doté d'une bonne capacité d'apprentissage, je recherche un stage ou un premier emploi afin de mettre en pratique mes compétences techniques et de contribuer activement à des projets innovants.",
       highlights: {
         ai: {
           title: "Intelligence Artificielle",
@@ -148,19 +148,19 @@ export const translations = {
       description: "Un parcours scolaire marqué par l'excellence et la passion pour l'informatique.",
       current: "En cours",
       items: {
-        master: {
-          period: "2025 – En cours",
-          title: "Master 1 - Intelligence Artificielle & Modélisation des Données",
-          institution: "Université de Djibouti",
-          description: "Formation avancée en intelligence artificielle, modélisation des données et apprentissage automatique.",
-          achievement: "En cours",
-        },
         license: {
           period: "2022 – 2025",
           title: "Licence en Informatique",
           institution: "Université de Djibouti",
           description: "Formation complète en informatique couvrant la programmation, les bases de données, les réseaux et l'intelligence artificielle.",
           achievement: "Mention Bien",
+        },
+        bac: {
+          period: "2022",
+          title: "Baccalauréat",
+          institution: "Lycée d'État de Djibouti",
+          description: "Diplôme de fin d'études secondaires, série scientifique.",
+          achievement: "Mention Très Bien",
         },
       },
     },
@@ -209,7 +209,7 @@ export const translations = {
     hero: {
       welcome: "Welcome to my portfolio",
       name: "Abdoulrazak Houssein",
-      title: "Computer Scientist | Master's Student in Artificial Intelligence",
+      title: "Computer Scientist | Bachelor's Student in Computer Science",
       contactMe: "Contact Me",
       downloadCV: "Download CV",
       discover: "Discover",
@@ -220,7 +220,7 @@ export const translations = {
       subtitle: "About me",
       title: "A developer passionate about",
       titleHighlight: "innovation",
-      description: "Master's student in Artificial Intelligence and Data Modeling, holder of a bachelor's degree in computer science, passionate about web application development and artificial intelligence. I have completed several academic projects using Flask, MySQL, and AI concepts, including automatic generation of specifications using language models. Motivated, curious, and with good learning ability, I am looking for an internship or first job to put my technical skills into practice and actively contribute to innovative projects.",
+      description: "Bachelor's student in Computer Science, passionate about web application development and artificial intelligence. I have completed several academic projects using Flask, MySQL, and AI concepts, including automatic generation of specifications using language models. Motivated, curious, and with good learning ability, I am looking for an internship or first job to put my technical skills into practice and actively contribute to innovative projects.",
       highlights: {
         ai: {
           title: "Artificial Intelligence",
@@ -341,19 +341,19 @@ export const translations = {
       description: "An academic journey marked by excellence and passion for computer science.",
       current: "In progress",
       items: {
-        master: {
-          period: "2025 – Present",
-          title: "Master's Degree - Artificial Intelligence & Data Modeling",
-          institution: "University of Djibouti",
-          description: "Advanced training in artificial intelligence, data modeling, and machine learning.",
-          achievement: "In progress",
-        },
         license: {
           period: "2022 – 2025",
           title: "Bachelor's Degree in Computer Science",
           institution: "University of Djibouti",
           description: "Comprehensive computer science education covering programming, databases, networks, and artificial intelligence.",
           achievement: "High Honors",
+        },
+        bac: {
+          period: "2022",
+          title: "Baccalauréat (High School Diploma)",
+          institution: "Lycée d'État de Djibouti",
+          description: "Secondary education diploma, science track.",
+          achievement: "High Honors (Très Bien)",
         },
       },
     },
