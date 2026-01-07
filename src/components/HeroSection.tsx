@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
-import { ArrowDown, Mail, Github, Linkedin } from "lucide-react";
+import { ArrowDown, Mail, Github, Linkedin, Download } from "lucide-react";
 import { motion } from "framer-motion";
 import profilePhoto from "@/assets/profile-photo.jpg";
+import cvFile from "@/assets/CV 1.pdf";
 
 export const HeroSection = () => {
   const handleContactClick = () => {
@@ -110,10 +111,17 @@ export const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}
+              className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto"
             >
               <Button variant="hero" size="lg" onClick={handleContactClick} className="w-full sm:w-auto">
                 <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
                 Me Contacter
+              </Button>
+              <Button variant="outline" size="lg" asChild className="w-full sm:w-auto">
+                <a href={cvFile} download="CV-Abdoulrazak-Houssein.pdf">
+                  <Download className="w-4 h-4 sm:w-5 sm:h-5" />
+                  Télécharger CV
+                </a>
               </Button>
             </motion.div>
           </div>

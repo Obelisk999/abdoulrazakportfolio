@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Download } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import cvFile from "@/assets/CV 1.pdf";
 
 const navLinks = [
   { href: "#accueil", label: "Accueil" },
@@ -69,7 +70,7 @@ export const Navbar = () => {
               </a>
             ))}
             <Button variant="hero" size="sm" className="ml-4" asChild>
-              <a href="/cv-abdoulrazak-houssein.pdf" download>
+              <a href={cvFile} download="CV-Abdoulrazak-Houssein.pdf">
                 <Download className="w-4 h-4" />
                 CV
               </a>
@@ -119,7 +120,7 @@ export const Navbar = () => {
                   transition={{ delay: navLinks.length * 0.05 }}
                 >
                   <Button variant="hero" className="mt-2 w-full" asChild>
-                    <a href="/cv-abdoulrazak-houssein.pdf" download>
+                    <a href={cvFile} download="CV-Abdoulrazak-Houssein.pdf">
                       <Download className="w-4 h-4" />
                       Télécharger CV
                     </a>
