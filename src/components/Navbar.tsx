@@ -4,19 +4,24 @@ import { Menu, X, Download } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import cvFile from "@/assets/CV 1.pdf";
 import { ThemeToggle } from "@/components/ThemeToggle";
-
-const navLinks = [
-  { href: "#accueil", label: "Accueil" },
-  { href: "#apropos", label: "À propos" },
-  { href: "#competences", label: "Compétences" },
-  { href: "#projets", label: "Projets" },
-  { href: "#education", label: "Éducation" },
-  { href: "#contact", label: "Contact" },
-];
+import { LanguageToggle } from "@/components/LanguageToggle";
+import { useLanguage } from "@/hooks/useLanguage";
+import { translations } from "@/translations/translations";
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { language } = useLanguage();
+  const t = translations[language];
+
+  const navLinks = [
+    { href: "#accueil", label: t.nav.home },
+    { href: "#apropos", label: t.nav.about },
+    { href: "#competences", label: t.nav.skills },
+    { href: "#projets", label: t.nav.projects },
+    { href: "#education", label: t.nav.education },
+    { href: "#contact", label: t.nav.contact },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -70,17 +75,19 @@ export const Navbar = () => {
                 {link.label}
               </a>
             ))}
+            <LanguageToggle />
             <ThemeToggle />
             <Button variant="hero" size="sm" className="ml-4" asChild>
               <a href={cvFile} download="CV-Abdoulrazak-Houssein.pdf">
                 <Download className="w-4 h-4" />
-                CV
+                {t.nav.downloadCV}
               </a>
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
           <div className="lg:hidden flex items-center gap-2">
+            <LanguageToggle />
             <ThemeToggle />
             <button
               className="p-2 text-foreground"
@@ -127,7 +134,7 @@ export const Navbar = () => {
                   <Button variant="hero" className="mt-2 w-full" asChild>
                     <a href={cvFile} download="CV-Abdoulrazak-Houssein.pdf">
                       <Download className="w-4 h-4" />
-                      Télécharger CV
+                      {t.nav.downloadCVFull}
                     </a>
                   </Button>
                 </motion.div>

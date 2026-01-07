@@ -1,68 +1,53 @@
 import { Button } from "@/components/ui/button";
 import { Github, Calendar, Bot, BarChart3 } from "lucide-react";
 import { AnimatedSection, AnimatedCard } from "./AnimatedSection";
-
-const projects = [
-  {
-    title: "Application de Réservation de Salles",
-    description:
-      "Conception et développement d'une application web permettant la création et la réservation de salles. Développement backend avec Flask (Python) et base de données MySQL.",
-    technologies: ["Flask", "MySQL", "Bootstrap", "Python", "HTML/CSS/JS"],
-    features: [
-      "Authentification et gestion des rôles",
-      "Gestion des salles et réservations",
-      "Notifications automatiques par email",
-      "Interface responsive Bootstrap",
-    ],
-    icon: Calendar,
-    color: "from-blue-500 to-cyan-500",
-    github: "https://github.com/Obelisk999/RoomReserve",
-  },
-  {
-    title: "Gestion de Projets avec IA",
-    description:
-      "Développement d'une application web de gestion de projets, tâches, équipes et échéances. Intégration d'un module d'intelligence artificielle pour la génération automatique de cahiers des charges.",
-    technologies: ["Python", "Flask", "LLM", "MySQL"],
-    features: [
-      "Gestion projets, tâches et équipes",
-      "Génération automatique de cahiers des charges",
-      "Intégration de modèles de langage",
-      "Structuration des données et logique métier",
-    ],
-    icon: Bot,
-    color: "from-purple-500 to-pink-500",
-    github: "https://github.com/haki24gamer/Mashru3",
-  },
-  {
-    title: "Analyse des habitudes d'écoute Spotify",
-    description:
-      "Analyse d'un jeu de données Spotify représentant les habitudes d'écoute d'un utilisateur sur 2 années. Conception de tableaux de bord interactifs avec Power BI.",
-    technologies: ["Python", "Pandas", "Power BI", "Data Analysis"],
-    features: [
-      "Nettoyage et préparation des données",
-      "Tableaux de bord interactifs Power BI",
-      "Analyse des tendances d'écoute",
-      "Création d'indicateurs clés (KPI)",
-    ],
-    icon: BarChart3,
-    color: "from-green-500 to-emerald-500",
-    github: null,
-  },
-];
+import { useLanguage } from "@/hooks/useLanguage";
+import { translations } from "@/translations/translations";
 
 export const ProjectsSection = () => {
+  const { language } = useLanguage();
+  const t = translations[language];
+
+  const projects = [
+    {
+      title: t.projects.roomReserve.title,
+      description: t.projects.roomReserve.description,
+      technologies: ["Flask", "MySQL", "Bootstrap", "Python", "HTML/CSS/JS"],
+      features: t.projects.roomReserve.features,
+      icon: Calendar,
+      color: "from-blue-500 to-cyan-500",
+      github: "https://github.com/Obelisk999/RoomReserve",
+    },
+    {
+      title: t.projects.projectManager.title,
+      description: t.projects.projectManager.description,
+      technologies: ["Python", "Flask", "LLM", "MySQL"],
+      features: t.projects.projectManager.features,
+      icon: Bot,
+      color: "from-purple-500 to-pink-500",
+      github: "https://github.com/haki24gamer/Mashru3",
+    },
+    {
+      title: t.projects.spotify.title,
+      description: t.projects.spotify.description,
+      technologies: ["Python", "Pandas", "Power BI", "Data Analysis"],
+      features: t.projects.spotify.features,
+      icon: BarChart3,
+      color: "from-green-500 to-emerald-500",
+      github: null,
+    },
+  ];
   return (
     <section id="projets" className="py-16 sm:py-20 md:py-32 bg-card/50">
       <div className="container mx-auto px-4 md:px-6">
         <AnimatedSection className="max-w-3xl mx-auto text-center mb-12 sm:mb-16">
-          <p className="text-primary font-medium mb-3 sm:mb-4 text-sm sm:text-base">Mes réalisations</p>
+          <p className="text-primary font-medium mb-3 sm:mb-4 text-sm sm:text-base">{t.projects.subtitle}</p>
           <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
-            Projets{" "}
-            <span className="text-gradient">Académiques</span>
+            {t.projects.title}{" "}
+            <span className="text-gradient">{t.projects.titleHighlight}</span>
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground px-2">
-            Des projets concrets qui démontrent mes compétences techniques et ma capacité 
-            à résoudre des problèmes complexes.
+            {t.projects.description}
           </p>
         </AnimatedSection>
 
@@ -103,7 +88,7 @@ export const ProjectsSection = () => {
 
                   {/* Features */}
                   <div className="mb-4 sm:mb-6">
-                    <h4 className="text-xs sm:text-sm font-semibold mb-2 sm:mb-3 text-foreground">Fonctionnalités clés :</h4>
+                    <h4 className="text-xs sm:text-sm font-semibold mb-2 sm:mb-3 text-foreground">{t.projects.keyFeatures}</h4>
                     <ul className="grid grid-cols-1 gap-1.5 sm:gap-2">
                       {project.features.map((feature) => (
                         <li key={feature} className="flex items-center gap-2 text-xs sm:text-sm text-muted-foreground">
@@ -120,7 +105,7 @@ export const ProjectsSection = () => {
                       <a href={project.github} target="_blank" rel="noopener noreferrer">
                         <Button variant="glass" size="sm" className="text-xs sm:text-sm">
                           <Github className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-                          Code source
+                          {t.projects.sourceCode}
                         </Button>
                       </a>
                     </div>
