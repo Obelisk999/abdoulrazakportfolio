@@ -16,7 +16,7 @@ export const translations = {
     hero: {
       welcome: "Bienvenue sur mon portfolio",
       name: "Abdoulrazak Houssein",
-      title: "Informaticien | Étudiant en Licence Informatique",
+      title: "Informaticien | Titulaire d'une Licence en Informatique",
       contactMe: "Me Contacter",
       downloadCV: "Télécharger CV",
       discover: "Découvrir",
@@ -27,7 +27,7 @@ export const translations = {
       subtitle: "À propos de moi",
       title: "Un développeur passionné par",
       titleHighlight: "l'innovation",
-      description: "Étudiant en Licence Informatique, passionné par le développement d'applications web et l'intelligence artificielle. J'ai réalisé plusieurs projets académiques utilisant Flask, MySQL et des concepts d'IA, notamment la génération automatique de cahiers des charges à l'aide de modèles de langage. Motivé, curieux et doté d'une bonne capacité d'apprentissage, je recherche un stage ou un premier emploi afin de mettre en pratique mes compétences techniques et de contribuer activement à des projets innovants.",
+      description: "Titulaire d'une Licence en Informatique, passionné par le développement d'applications web et l'intelligence artificielle. J'ai réalisé plusieurs projets académiques utilisant Flask, MySQL et des concepts d'IA, notamment la génération automatique de cahiers des charges à l'aide de modèles de langage. Motivé, curieux et doté d'une bonne capacité d'apprentissage, je recherche un stage ou un premier emploi afin de mettre en pratique mes compétences techniques et de contribuer activement à des projets innovants.",
       highlights: {
         ai: {
           title: "Intelligence Artificielle",
@@ -209,7 +209,7 @@ export const translations = {
     hero: {
       welcome: "Welcome to my portfolio",
       name: "Abdoulrazak Houssein",
-      title: "Computer Scientist | Bachelor's Student in Computer Science",
+      title: "Computer Scientist | Bachelor's Degree Holder in Computer Science",
       contactMe: "Contact Me",
       downloadCV: "Download CV",
       discover: "Discover",
@@ -220,7 +220,7 @@ export const translations = {
       subtitle: "About me",
       title: "A developer passionate about",
       titleHighlight: "innovation",
-      description: "Bachelor's student in Computer Science, passionate about web application development and artificial intelligence. I have completed several academic projects using Flask, MySQL, and AI concepts, including automatic generation of specifications using language models. Motivated, curious, and with good learning ability, I am looking for an internship or first job to put my technical skills into practice and actively contribute to innovative projects.",
+      description: "Bachelor's degree holder in Computer Science, passionate about web application development and artificial intelligence. I have completed several academic projects using Flask, MySQL, and AI concepts, including automatic generation of specifications using language models. Motivated, curious, and with good learning ability, I am looking for an internship or first job to put my technical skills into practice and actively contribute to innovative projects.",
       highlights: {
         ai: {
           title: "Artificial Intelligence",
