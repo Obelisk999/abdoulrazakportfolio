@@ -3,8 +3,12 @@ import { ArrowDown, Mail, Github, Linkedin, Download } from "lucide-react";
 import { motion } from "framer-motion";
 import profilePhoto from "@/assets/profile-photo.jpg";
 import cvFile from "@/assets/CV 1.pdf";
+import { useLanguage } from "@/hooks/useLanguage";
+import { translations } from "@/translations/translations";
 
 export const HeroSection = () => {
+  const { language } = useLanguage();
+  const t = translations[language];
   const handleContactClick = () => {
     const element = document.querySelector("#contact");
     if (element) {
@@ -52,7 +56,7 @@ export const HeroSection = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-primary font-medium mb-3 sm:mb-4 text-sm sm:text-base"
             >
-              Bienvenue sur mon portfolio
+              {t.hero.welcome}
             </motion.p>
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
@@ -69,7 +73,7 @@ export const HeroSection = () => {
               transition={{ duration: 0.5, delay: 0.4 }}
               className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-6 sm:mb-8"
             >
-              Informaticien | Étudiant en Master 1 Intelligence Artificielle
+              {t.hero.title}
             </motion.p>
             
             {/* Social Links */}
@@ -115,12 +119,12 @@ export const HeroSection = () => {
             >
               <Button variant="hero" size="lg" onClick={handleContactClick} className="w-full sm:w-auto">
                 <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
-                Me Contacter
+                {t.hero.contactMe}
               </Button>
               <Button variant="outline" size="lg" asChild className="w-full sm:w-auto">
                 <a href={cvFile} download="CV-Abdoulrazak-Houssein.pdf">
                   <Download className="w-4 h-4 sm:w-5 sm:h-5" />
-                  Télécharger CV
+                  {t.hero.downloadCV}
                 </a>
               </Button>
             </motion.div>
@@ -142,7 +146,7 @@ export const HeroSection = () => {
             }}
             className="flex flex-col items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
           >
-            <span className="text-sm">Découvrir</span>
+            <span className="text-sm">{t.hero.discover}</span>
             <ArrowDown className="w-5 h-5" />
           </a>
         </motion.div>

@@ -5,40 +5,9 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, MapPin, Github, Linkedin, Send, Loader2 } from "lucide-react";
 import { AnimatedSection, AnimatedCard } from "./AnimatedSection";
+import { useLanguage } from "@/hooks/useLanguage";
+import { translations } from "@/translations/translations";
 
-const contactInfo = [
-  {
-    icon: Phone,
-    label: "Téléphone",
-    value: "+253 77 15 55 66",
-    href: "tel:+25377155566",
-  },
-  {
-    icon: Mail,
-    label: "Email",
-    value: "abdoulrazak.work@gmail.com",
-    href: "mailto:abdoulrazak.work@gmail.com",
-  },
-  {
-    icon: MapPin,
-    label: "Localisation",
-    value: "Djibouti, Djibouti",
-    href: null,
-  },
-];
-
-const socialLinks = [
-  {
-    icon: Github,
-    label: "GitHub",
-    href: "https://github.com/Obelisk999",
-  },
-  {
-    icon: Linkedin,
-    label: "LinkedIn",
-    href: "https://www.linkedin.com/in/abdourazak-houssein-a91b67291/",
-  },
-];
 
 export const ContactSection = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -49,6 +18,42 @@ export const ContactSection = () => {
     message: "",
   });
   const { toast } = useToast();
+  const { language } = useLanguage();
+  const t = translations[language];
+
+  const contactInfo = [
+    {
+      icon: Phone,
+      label: t.contact.info.phone,
+      value: "+253 77 15 55 66",
+      href: "tel:+25377155566",
+    },
+    {
+      icon: Mail,
+      label: t.contact.info.email,
+      value: "abdoulrazak.work@gmail.com",
+      href: "mailto:abdoulrazak.work@gmail.com",
+    },
+    {
+      icon: MapPin,
+      label: t.contact.info.location,
+      value: "Djibouti, Djibouti",
+      href: null,
+    },
+  ];
+
+  const socialLinks = [
+    {
+      icon: Github,
+      label: "GitHub",
+      href: "https://github.com/Obelisk999",
+    },
+    {
+      icon: Linkedin,
+      label: "LinkedIn",
+      href: "https://www.linkedin.com/in/abdourazak-houssein-a91b67291/",
+    },
+  ];
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -63,8 +68,8 @@ export const ContactSection = () => {
     await new Promise((resolve) => setTimeout(resolve, 1500));
 
     toast({
-      title: "Message envoyé !",
-      description: "Merci pour votre message. Je vous répondrai dans les plus brefs délais.",
+      title: t.contact.form.success,
+      description: t.contact.form.successDesc,
     });
 
     setFormData({ name: "", email: "", subject: "", message: "" });
@@ -75,13 +80,13 @@ export const ContactSection = () => {
     <section id="contact" className="py-16 sm:py-20 md:py-32 bg-background">
       <div className="container mx-auto px-4 md:px-6">
         <AnimatedSection className="max-w-3xl mx-auto text-center mb-12 sm:mb-16">
-          <p className="text-primary font-medium mb-3 sm:mb-4 text-sm sm:text-base">Restons en contact</p>
+          <p className="text-primary font-medium mb-3 sm:mb-4 text-sm sm:text-base">{t.contact.subtitle}</p>
           <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
-            Me{" "}
-            <span className="text-gradient">Contacter</span>
+            {t.contact.title}{" "}
+            <span className="text-gradient">{t.contact.titleHighlight}</span>
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground px-2">
-            Vous avez un projet en tête ou une opportunité à partager ? N'hésitez pas à me contacter !
+            {t.contact.description}
           </p>
         </AnimatedSection>
 
@@ -89,7 +94,7 @@ export const ContactSection = () => {
           {/* Contact Info */}
           <AnimatedCard delay={0.1}>
             <div>
-              <h3 className="font-display text-lg sm:text-xl font-semibold mb-4 sm:mb-6">Informations de contact</h3>
+              <h3 className="font-display text-lg sm:text-xl font-semibold mb-4 sm:mb-6">{t.contact.info.title}</h3>
               
               <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
                 {contactInfo.map((info) => (
@@ -118,7 +123,7 @@ export const ContactSection = () => {
               </div>
 
               {/* Social Links */}
-              <h3 className="font-display text-lg sm:text-xl font-semibold mb-3 sm:mb-4">Réseaux sociaux</h3>
+              <h3 className="font-display text-lg sm:text-xl font-semibold mb-3 sm:mb-4">{t.contact.social}</h3>
               <div className="flex gap-3 sm:gap-4">
                 {socialLinks.map((link) => (
                   <a
@@ -139,27 +144,27 @@ export const ContactSection = () => {
           {/* Contact Form */}
           <AnimatedCard delay={0.2}>
             <div className="p-5 sm:p-6 lg:p-8 rounded-2xl bg-card border border-border/50 shadow-lg">
-              <h3 className="font-display text-lg sm:text-xl font-semibold mb-4 sm:mb-6">Envoyez-moi un message</h3>
+              <h3 className="font-display text-lg sm:text-xl font-semibold mb-4 sm:mb-6">{t.contact.form.title}</h3>
               
               <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                   <div>
                     <label htmlFor="name" className="block text-xs sm:text-sm font-medium mb-1.5 sm:mb-2">
-                      Nom complet
+                      {t.contact.form.name}
                     </label>
                     <Input
                       id="name"
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
-                      placeholder="Votre nom"
+                      placeholder={t.contact.form.namePlaceholder}
                       required
                       className="bg-secondary/50 text-sm sm:text-base h-10 sm:h-11"
                     />
                   </div>
                   <div>
                     <label htmlFor="email" className="block text-xs sm:text-sm font-medium mb-1.5 sm:mb-2">
-                      Email
+                      {t.contact.form.email}
                     </label>
                     <Input
                       id="email"
@@ -167,7 +172,7 @@ export const ContactSection = () => {
                       type="email"
                       value={formData.email}
                       onChange={handleChange}
-                      placeholder="votre@email.com"
+                      placeholder={t.contact.form.emailPlaceholder}
                       required
                       className="bg-secondary/50 text-sm sm:text-base h-10 sm:h-11"
                     />
@@ -176,14 +181,14 @@ export const ContactSection = () => {
 
                 <div>
                   <label htmlFor="subject" className="block text-xs sm:text-sm font-medium mb-1.5 sm:mb-2">
-                    Sujet
+                    {t.contact.form.subject}
                   </label>
                   <Input
                     id="subject"
                     name="subject"
                     value={formData.subject}
                     onChange={handleChange}
-                    placeholder="Objet de votre message"
+                    placeholder={t.contact.form.subjectPlaceholder}
                     required
                     className="bg-secondary/50 text-sm sm:text-base h-10 sm:h-11"
                   />
@@ -191,14 +196,14 @@ export const ContactSection = () => {
 
                 <div>
                   <label htmlFor="message" className="block text-xs sm:text-sm font-medium mb-1.5 sm:mb-2">
-                    Message
+                    {t.contact.form.message}
                   </label>
                   <Textarea
                     id="message"
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
-                    placeholder="Votre message..."
+                    placeholder={t.contact.form.messagePlaceholder}
                     rows={4}
                     required
                     className="bg-secondary/50 resize-none text-sm sm:text-base"
@@ -209,12 +214,12 @@ export const ContactSection = () => {
                   {isLoading ? (
                     <>
                       <Loader2 className="w-4 h-4 sm:w-5 sm:h-5 animate-spin" />
-                      Envoi en cours...
+                      {t.contact.form.sending}
                     </>
                   ) : (
                     <>
                       <Send className="w-4 h-4 sm:w-5 sm:h-5" />
-                      Envoyer le message
+                      {t.contact.form.send}
                     </>
                   )}
                 </Button>

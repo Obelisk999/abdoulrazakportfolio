@@ -1,66 +1,69 @@
 import { Code, Database, Monitor, Brain, BarChart3 } from "lucide-react";
 import { AnimatedSection, AnimatedCard } from "./AnimatedSection";
-
-const skillCategories = [
-  {
-    icon: Brain,
-    title: "Python & IA",
-    skills: [
-      { name: "Python (Flask, Pandas)", level: 85 },
-      { name: "NLP & Modèles de langage", level: 75 },
-      { name: "Analyse de données", level: 80 },
-    ],
-  },
-  {
-    icon: BarChart3,
-    title: "Data & Visualisation",
-    skills: [
-      { name: "Power BI", level: 80 },
-      { name: "Nettoyage de données", level: 85 },
-      { name: "Tableaux de bord", level: 80 },
-    ],
-  },
-  {
-    icon: Code,
-    title: "Développement Web",
-    skills: [
-      { name: "HTML/CSS", level: 90 },
-      { name: "JavaScript", level: 85 },
-      { name: "PHP", level: 75 },
-      { name: "Bootstrap", level: 85 },
-    ],
-  },
-  {
-    icon: Database,
-    title: "Bases de données",
-    skills: [
-      { name: "MySQL", level: 85 },
-      { name: "Modélisation (Merise, MCD, MLD)", level: 80 },
-    ],
-  },
-  {
-    icon: Monitor,
-    title: "Systèmes",
-    skills: [
-      { name: "Linux", level: 80 },
-      { name: "Windows", level: 90 },
-    ],
-  },
-];
+import { useLanguage } from "@/hooks/useLanguage";
+import { translations } from "@/translations/translations";
 
 export const SkillsSection = () => {
+  const { language } = useLanguage();
+  const t = translations[language];
+
+  const skillCategories = [
+    {
+      icon: Brain,
+      title: t.skills.categories.pythonAI,
+      skills: [
+        { name: "Python (Flask, Pandas)", level: 85 },
+        { name: "NLP & " + (language === "fr" ? "Modèles de langage" : "Language Models"), level: 75 },
+        { name: language === "fr" ? "Analyse de données" : "Data Analysis", level: 80 },
+      ],
+    },
+    {
+      icon: BarChart3,
+      title: t.skills.categories.dataViz,
+      skills: [
+        { name: "Power BI", level: 80 },
+        { name: language === "fr" ? "Nettoyage de données" : "Data Cleaning", level: 85 },
+        { name: language === "fr" ? "Tableaux de bord" : "Dashboards", level: 80 },
+      ],
+    },
+    {
+      icon: Code,
+      title: t.skills.categories.webDev,
+      skills: [
+        { name: "HTML/CSS", level: 90 },
+        { name: "JavaScript", level: 85 },
+        { name: "PHP", level: 75 },
+        { name: "Bootstrap", level: 85 },
+      ],
+    },
+    {
+      icon: Database,
+      title: t.skills.categories.database,
+      skills: [
+        { name: "MySQL", level: 85 },
+        { name: language === "fr" ? "Modélisation (Merise, MCD, MLD)" : "Modeling (Merise, ERD)", level: 80 },
+      ],
+    },
+    {
+      icon: Monitor,
+      title: t.skills.categories.systems,
+      skills: [
+        { name: "Linux", level: 80 },
+        { name: "Windows", level: 90 },
+      ],
+    },
+  ];
   return (
     <section id="competences" className="py-16 sm:py-20 md:py-32 bg-background">
       <div className="container mx-auto px-4 md:px-6">
         <AnimatedSection className="max-w-3xl mx-auto text-center mb-12 sm:mb-16">
-          <p className="text-primary font-medium mb-3 sm:mb-4 text-sm sm:text-base">Mes compétences</p>
+          <p className="text-primary font-medium mb-3 sm:mb-4 text-sm sm:text-base">{t.skills.subtitle}</p>
           <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
-            Technologies &{" "}
-            <span className="text-gradient">Expertise</span>
+            {t.skills.title}{" "}
+            <span className="text-gradient">{t.skills.titleHighlight}</span>
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground px-2">
-            Un ensemble de compétences techniques solides acquises à travers ma formation 
-            et mes projets personnels.
+            {t.skills.description}
           </p>
         </AnimatedSection>
 
