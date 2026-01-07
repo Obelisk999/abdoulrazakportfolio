@@ -14,13 +14,13 @@ export const ThemeToggle = () => {
 
   if (!mounted) {
     return (
-      <Button variant="ghost" size="icon" className="relative" aria-label="Toggle theme">
+      <Button variant="ghost" size="icon" className="relative" aria-label="Toggle theme" disabled>
         <Sun className="h-5 w-5" />
       </Button>
     );
   }
 
-  const isDark = theme === "dark";
+  const isDark = theme === "dark" || (theme === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches);
 
   return (
     <Button
