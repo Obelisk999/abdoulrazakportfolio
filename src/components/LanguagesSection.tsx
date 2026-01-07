@@ -1,23 +1,36 @@
 import { AnimatedSection, AnimatedCard } from "./AnimatedSection";
-
-const languages = [
-  { name: "Somali", level: 100, description: "Langue maternelle" },
-  { name: "Français", level: 95, description: "Courant" },
-  { name: "Arabe", level: 85, description: "Courant" },
-  { name: "Anglais", level: 70, description: "Intermédiaire avancé" },
-];
+import { useLanguage } from "@/hooks/useLanguage";
+import { translations } from "@/translations/translations";
 
 export const LanguagesSection = () => {
+  const { language } = useLanguage();
+  const t = translations[language];
+
+  const languages = [
+    { name: "Somali", level: 100, description: t.languages.proficiencies.native },
+    { name: language === "fr" ? "Français" : "French", level: 95, description: t.languages.proficiencies.fluent },
+    { name: language === "fr" ? "Arabe" : "Arabic", level: 85, description: t.languages.proficiencies.fluent },
+    { name: language === "fr" ? "Anglais" : "English", level: 70, description: t.languages.proficiencies.advanced },
+  ];
   return (
     <section className="py-16 sm:py-20 md:py-32 bg-card/50">
       <div className="container mx-auto px-4 md:px-6">
         <AnimatedSection className="max-w-3xl mx-auto text-center mb-12 sm:mb-16">
-          <p className="text-primary font-medium mb-3 sm:mb-4 text-sm sm:text-base">Communication</p>
+          <p className="text-primary font-medium mb-3 sm:mb-4 text-sm sm:text-base">{t.languages.subtitle}</p>
           <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
-            <span className="text-gradient">Langues</span> parlées
+            {language === "fr" ? (
+              <>
+                <span className="text-gradient">{t.languages.titleHighlight}</span> {t.languages.titleSuffix}
+              </>
+            ) : (
+              <>
+                {t.languages.title}{" "}
+                <span className="text-gradient">{t.languages.titleHighlight}</span>
+              </>
+            )}
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground px-2">
-            Une maîtrise multilingue qui me permet de communiquer efficacement dans un contexte international.
+            {t.languages.description}
           </p>
         </AnimatedSection>
 

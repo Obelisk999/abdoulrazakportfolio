@@ -132,6 +132,52 @@ export const translations = {
         successDesc: "Merci pour votre message. Je vous répondrai dans les plus brefs délais.",
       },
     },
+    
+    // Education Section
+    education: {
+      subtitle: "Mon parcours",
+      title: "Formation",
+      titleHighlight: "Académique",
+      description: "Un parcours scolaire marqué par l'excellence et la passion pour l'informatique.",
+      current: "En cours",
+      items: {
+        master: {
+          period: "2025 – En cours",
+          title: "Master 1 - Intelligence Artificielle & Modélisation des Données",
+          institution: "Université de Djibouti",
+          description: "Formation avancée en intelligence artificielle, modélisation des données et apprentissage automatique.",
+          achievement: "En cours",
+        },
+        license: {
+          period: "2022 – 2025",
+          title: "Licence en Informatique",
+          institution: "Université de Djibouti",
+          description: "Formation complète en informatique couvrant la programmation, les bases de données, les réseaux et l'intelligence artificielle.",
+          achievement: "Mention Bien",
+        },
+      },
+    },
+    
+    // Languages Section
+    languages: {
+      subtitle: "Communication",
+      title: "",
+      titleHighlight: "Langues",
+      titleSuffix: "parlées",
+      description: "Une maîtrise multilingue qui me permet de communiquer efficacement dans un contexte international.",
+      proficiencies: {
+        native: "Langue maternelle",
+        fluent: "Courant",
+        advanced: "Intermédiaire avancé",
+      },
+    },
+    
+    // Footer
+    footer: {
+      copyright: "Tous droits réservés.",
+      madeWith: "Fait avec",
+      in: "à Djibouti",
+    },
   },
   
   en: {
@@ -266,6 +312,52 @@ export const translations = {
         success: "Message sent!",
         successDesc: "Thank you for your message. I will reply to you as soon as possible.",
       },
+    },
+    
+    // Education Section
+    education: {
+      subtitle: "My journey",
+      title: "Academic",
+      titleHighlight: "Background",
+      description: "An academic journey marked by excellence and passion for computer science.",
+      current: "In progress",
+      items: {
+        master: {
+          period: "2025 – Present",
+          title: "Master's Degree - Artificial Intelligence & Data Modeling",
+          institution: "University of Djibouti",
+          description: "Advanced training in artificial intelligence, data modeling, and machine learning.",
+          achievement: "In progress",
+        },
+        license: {
+          period: "2022 – 2025",
+          title: "Bachelor's Degree in Computer Science",
+          institution: "University of Djibouti",
+          description: "Comprehensive computer science education covering programming, databases, networks, and artificial intelligence.",
+          achievement: "High Honors",
+        },
+      },
+    },
+    
+    // Languages Section
+    languages: {
+      subtitle: "Communication",
+      title: "Spoken",
+      titleHighlight: "Languages",
+      titleSuffix: "",
+      description: "Multilingual proficiency that allows me to communicate effectively in an international context.",
+      proficiencies: {
+        native: "Native language",
+        fluent: "Fluent",
+        advanced: "Advanced intermediate",
+      },
+    },
+    
+    // Footer
+    footer: {
+      copyright: "All rights reserved.",
+      madeWith: "Made with",
+      in: "in Djibouti",
     },
   },
 } as const;

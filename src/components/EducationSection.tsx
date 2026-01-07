@@ -1,37 +1,41 @@
 import { GraduationCap, Award, Calendar } from "lucide-react";
 import { AnimatedSection, AnimatedCard } from "./AnimatedSection";
-
-const education = [
-  {
-    period: "2025 – En cours",
-    title: "Master 1 - Intelligence Artificielle & Modélisation des Données",
-    institution: "Université de Djibouti",
-    description: "Formation avancée en intelligence artificielle, modélisation des données et apprentissage automatique.",
-    achievement: "En cours",
-    current: true,
-  },
-  {
-    period: "2022 – 2025",
-    title: "Licence en Informatique",
-    institution: "Université de Djibouti",
-    description: "Formation complète en informatique couvrant la programmation, les bases de données, les réseaux et l'intelligence artificielle.",
-    achievement: "Mention Bien",
-    current: false,
-  },
-];
+import { useLanguage } from "@/hooks/useLanguage";
+import { translations } from "@/translations/translations";
 
 export const EducationSection = () => {
+  const { language } = useLanguage();
+  const t = translations[language];
+
+  const education = [
+    {
+      period: t.education.items.master.period,
+      title: t.education.items.master.title,
+      institution: t.education.items.master.institution,
+      description: t.education.items.master.description,
+      achievement: t.education.items.master.achievement,
+      current: true,
+    },
+    {
+      period: t.education.items.license.period,
+      title: t.education.items.license.title,
+      institution: t.education.items.license.institution,
+      description: t.education.items.license.description,
+      achievement: t.education.items.license.achievement,
+      current: false,
+    },
+  ];
   return (
     <section id="education" className="py-16 sm:py-20 md:py-32 bg-background">
       <div className="container mx-auto px-4 md:px-6">
         <AnimatedSection className="max-w-3xl mx-auto text-center mb-12 sm:mb-16">
-          <p className="text-primary font-medium mb-3 sm:mb-4 text-sm sm:text-base">Mon parcours</p>
+          <p className="text-primary font-medium mb-3 sm:mb-4 text-sm sm:text-base">{t.education.subtitle}</p>
           <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
-            Formation{" "}
-            <span className="text-gradient">Académique</span>
+            {t.education.title}{" "}
+            <span className="text-gradient">{t.education.titleHighlight}</span>
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground px-2">
-            Un parcours scolaire marqué par l'excellence et la passion pour l'informatique.
+            {t.education.description}
           </p>
         </AnimatedSection>
 
@@ -65,7 +69,7 @@ export const EducationSection = () => {
                       </div>
                       {item.current && (
                         <span className="px-2 py-0.5 text-[10px] sm:text-xs font-medium rounded-full bg-primary/20 text-primary">
-                          En cours
+                          {t.education.current}
                         </span>
                       )}
                     </div>
