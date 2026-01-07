@@ -8,9 +8,9 @@ export const LanguagesSection = () => {
 
   const languages = [
     { name: "Somali", level: 100, description: t.languages.proficiencies.native },
-    { name: language === "fr" ? "Français" : "French", level: 95, description: t.languages.proficiencies.fluent },
-    { name: language === "fr" ? "Arabe" : "Arabic", level: 85, description: t.languages.proficiencies.fluent },
-    { name: language === "fr" ? "Anglais" : "English", level: 70, description: t.languages.proficiencies.advanced },
+    { name: t.languages.languageNames.french, level: 95, description: t.languages.proficiencies.fluent },
+    { name: t.languages.languageNames.arabic, level: 85, description: t.languages.proficiencies.fluent },
+    { name: t.languages.languageNames.english, level: 70, description: t.languages.proficiencies.advanced },
   ];
   return (
     <section className="py-16 sm:py-20 md:py-32 bg-card/50">

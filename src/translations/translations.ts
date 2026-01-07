@@ -61,6 +61,13 @@ export const translations = {
         database: "Bases de données",
         systems: "Systèmes",
       },
+      skillNames: {
+        nlp: "NLP & Modèles de langage",
+        dataAnalysis: "Analyse de données",
+        dataCleaning: "Nettoyage de données",
+        dashboards: "Tableaux de bord",
+        modeling: "Modélisation (Merise, MCD, MLD)",
+      },
     },
     
     // Projects Section
@@ -170,6 +177,11 @@ export const translations = {
         fluent: "Courant",
         advanced: "Intermédiaire avancé",
       },
+      languageNames: {
+        french: "Français",
+        arabic: "Arabe",
+        english: "Anglais",
+      },
     },
     
     // Footer
@@ -241,6 +253,13 @@ export const translations = {
         webDev: "Web Development",
         database: "Databases",
         systems: "Systems",
+      },
+      skillNames: {
+        nlp: "NLP & Language Models",
+        dataAnalysis: "Data Analysis",
+        dataCleaning: "Data Cleaning",
+        dashboards: "Dashboards",
+        modeling: "Modeling (Merise, ERD)",
       },
     },
     
@@ -350,6 +369,11 @@ export const translations = {
         native: "Native language",
         fluent: "Fluent",
         advanced: "Advanced intermediate",
+      },
+      languageNames: {
+        french: "French",
+        arabic: "Arabic",
+        english: "English",
       },
     },
     

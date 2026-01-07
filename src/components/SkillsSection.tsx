@@ -13,8 +13,8 @@ export const SkillsSection = () => {
       title: t.skills.categories.pythonAI,
       skills: [
         { name: "Python (Flask, Pandas)", level: 85 },
-        { name: "NLP & " + (language === "fr" ? "Modèles de langage" : "Language Models"), level: 75 },
-        { name: language === "fr" ? "Analyse de données" : "Data Analysis", level: 80 },
+        { name: t.skills.skillNames.nlp, level: 75 },
+        { name: t.skills.skillNames.dataAnalysis, level: 80 },
       ],
     },
     {
@@ -22,8 +22,8 @@ export const SkillsSection = () => {
       title: t.skills.categories.dataViz,
       skills: [
         { name: "Power BI", level: 80 },
-        { name: language === "fr" ? "Nettoyage de données" : "Data Cleaning", level: 85 },
-        { name: language === "fr" ? "Tableaux de bord" : "Dashboards", level: 80 },
+        { name: t.skills.skillNames.dataCleaning, level: 85 },
+        { name: t.skills.skillNames.dashboards, level: 80 },
       ],
     },
     {
@@ -41,7 +41,7 @@ export const SkillsSection = () => {
       title: t.skills.categories.database,
       skills: [
         { name: "MySQL", level: 85 },
-        { name: language === "fr" ? "Modélisation (Merise, MCD, MLD)" : "Modeling (Merise, ERD)", level: 80 },
+        { name: t.skills.skillNames.modeling, level: 80 },
       ],
     },
     {
