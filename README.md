@@ -46,6 +46,21 @@ The site will be available at `http://localhost:5173`
 
 ## 🚢 Deployment
 
+This project supports deployment to both **Vercel** and **GitHub Pages**.
+
+### Deploy to Vercel (Recommended)
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Obelisk999/abdoulrazakportfolio)
+
+**Quick Deploy:**
+1. Click the "Deploy with Vercel" button above, or
+2. Go to [vercel.com](https://vercel.com) and import your GitHub repository
+3. Vercel will automatically detect the configuration and deploy your site
+
+📖 **Detailed Guide:** See [VERCEL_DEPLOYMENT.md](./VERCEL_DEPLOYMENT.md) for complete instructions
+
+### Deploy to GitHub Pages
+
 This project is configured to automatically deploy to GitHub Pages.
 
 **Automatic Deployment:**
@@ -57,6 +72,16 @@ This project is configured to automatically deploy to GitHub Pages.
 1. Go to the "Actions" tab in GitHub
 2. Select "Deploy to GitHub Pages" workflow
 3. Click "Run workflow"
+
+📖 **Detailed Guide:** See [DEPLOYMENT.md](./DEPLOYMENT.md) for complete instructions
+
+### Why Two Deployment Options?
+
+Both deployments work simultaneously with the same codebase:
+- **Vercel**: Faster deploys, preview deployments, built-in analytics
+- **GitHub Pages**: Free hosting on GitHub infrastructure
+
+The application automatically detects the deployment platform and adjusts accordingly.
 
 ## 📝 Development
 

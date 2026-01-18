@@ -11,6 +11,9 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
+// Use base path for GitHub Pages, but not for Vercel
+const basename = import.meta.env.VERCEL ? "/" : "/abdoulrazakportfolio";
+
 const App = () => (
   <HelmetProvider>
     <QueryClientProvider client={queryClient}>
@@ -19,7 +22,7 @@ const App = () => (
           <TooltipProvider>
             <Toaster />
             <Sonner />
-            <BrowserRouter basename="/abdoulrazakportfolio">
+            <BrowserRouter basename={basename}>
               <Routes>
                 <Route path="/" element={<Index />} />
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
