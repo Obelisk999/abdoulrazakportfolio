@@ -1,95 +1,91 @@
-# Welcome to your Lovable project
+# Abdoulrazak Portfolio
 
-## Project info
+A modern, responsive portfolio website showcasing my work and skills as a web developer.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## 🌐 Live Demo
 
-## How can I edit this code?
+Visit the live site: [https://obelisk999.github.io/abdoulrazakportfolio/](https://obelisk999.github.io/abdoulrazakportfolio/)
 
-There are several ways of editing your application.
+## 🚀 Technologies Used
 
-**Use Lovable**
+This portfolio is built with modern web technologies:
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+- **React** - JavaScript library for building user interfaces
+- **TypeScript** - Type-safe development
+- **Vite** - Fast build tool and development server
+- **Tailwind CSS** - Utility-first CSS framework
+- **shadcn/ui** - High-quality UI components
+- **Framer Motion** - Animation library for smooth interactions
 
-Changes made via Lovable will be committed automatically to this repo.
+## 📦 Installation
 
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+To run this project locally, follow these steps:
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Clone the repository
+git clone https://github.com/Obelisk999/abdoulrazakportfolio.git
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Navigate to the project directory
+cd abdoulrazakportfolio
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start the development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The site will be available at `http://localhost:5173`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 🛠️ Available Scripts
 
-**Use GitHub Codespaces**
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build locally
+- `npm run lint` - Run ESLint for code quality
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 🚢 Deployment
 
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-### Deploy to GitHub Pages
-
-This project is configured to automatically deploy to GitHub Pages when changes are pushed to the `main` branch.
+This project is configured to automatically deploy to GitHub Pages.
 
 **Automatic Deployment:**
-1. Push your changes to the `main` branch
-2. GitHub Actions will automatically build and deploy your site
-3. Your site will be available at: `https://obelisk999.github.io/abdoulrazakportfolio/`
+1. Push changes to the `main` branch
+2. GitHub Actions automatically builds and deploys the site
+3. Site is available at: `https://obelisk999.github.io/abdoulrazakportfolio/`
 
 **Manual Deployment:**
-You can also trigger a deployment manually:
-1. Go to the "Actions" tab in your GitHub repository
-2. Select the "Deploy to GitHub Pages" workflow
+1. Go to the "Actions" tab in GitHub
+2. Select "Deploy to GitHub Pages" workflow
 3. Click "Run workflow"
 
-**First-time Setup:**
-To enable GitHub Pages for the first time:
-1. Go to your repository Settings
-2. Navigate to Pages (under "Code and automation")
-3. Under "Build and deployment", select Source: "GitHub Actions"
+## 📝 Development
 
-**Alternative: Deploy to Lovable**
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+The project structure is organized as follows:
 
-## Can I connect a custom domain to my Lovable project?
+- `/src/components` - Reusable React components
+- `/src/pages` - Page components
+- `/src/assets` - Images and static files
+- `/src/hooks` - Custom React hooks
+- `/src/translations` - Multi-language support
 
-Yes, you can!
+## ✨ Features
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+- Fully responsive design
+- Modern UI with smooth animations
+- Multi-language support (English/French)
+- Dark/Light theme support
+- Contact form
+- Project showcase
+- Downloadable CV
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+## 📧 Contact
+
+Feel free to reach out:
+
+- Email: abdoulrazak.work@gmail.com
+- LinkedIn: [Abdourazak Houssein](https://www.linkedin.com/in/abdourazak-houssein-a91b67291/)
+- GitHub: [Obelisk999](https://github.com/Obelisk999)
+
+## 📄 License
+
+This project is open source and available for personal use.
