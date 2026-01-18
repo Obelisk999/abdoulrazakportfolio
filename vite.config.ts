@@ -9,7 +9,7 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
-  base: "/abdoulrazakportfolio/",
+  base: process.env.VERCEL ? "/" : "/abdoulrazakportfolio/",
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
   resolve: {
     alias: {
