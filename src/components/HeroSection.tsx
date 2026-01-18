@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Mail, Github, Linkedin, Download } from "lucide-react";
 import { motion } from "framer-motion";
-import profilePhoto from "@/assets/profile-photo.jpg";
+import profilePhoto from "@/assets/Me3.jpeg";
 import cvFile from "@/assets/CV 1.pdf";
 import { useLanguage } from "@/hooks/useLanguage";
 import { translations } from "@/translations/translations";
