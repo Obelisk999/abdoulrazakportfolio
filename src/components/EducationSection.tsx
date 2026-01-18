@@ -9,19 +9,19 @@ export const EducationSection = () => {
 
   const education = [
     {
-      period: t.education.items.master.period,
-      title: t.education.items.master.title,
-      institution: t.education.items.master.institution,
-      description: t.education.items.master.description,
-      achievement: t.education.items.master.achievement,
-      current: true,
-    },
-    {
       period: t.education.items.license.period,
       title: t.education.items.license.title,
       institution: t.education.items.license.institution,
       description: t.education.items.license.description,
       achievement: t.education.items.license.achievement,
+      current: false,
+    },
+    {
+      period: t.education.items.bac.period,
+      title: t.education.items.bac.title,
+      institution: t.education.items.bac.institution,
+      description: t.education.items.bac.description,
+      achievement: t.education.items.bac.achievement,
       current: false,
     },
   ];
