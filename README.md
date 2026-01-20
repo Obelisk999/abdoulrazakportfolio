@@ -99,9 +99,20 @@ The project structure is organized as follows:
 - Modern UI with smooth animations
 - Multi-language support (English/French)
 - Dark/Light theme support
-- Contact form
+- **Working contact form** with email notifications (powered by Resend)
 - Project showcase
 - Downloadable CV
+
+## 📧 Contact Form Setup
+
+The contact form sends real emails to your Gmail account. To configure:
+
+1. See **[EMAIL_SETUP.md](./EMAIL_SETUP.md)** for detailed setup instructions
+2. Sign up for a free Resend account
+3. Add your `RESEND_API_KEY` to Vercel environment variables
+4. Redeploy your site
+
+The free tier includes 3,000 emails/month - perfect for a portfolio!
 
 ## 📧 Contact
 

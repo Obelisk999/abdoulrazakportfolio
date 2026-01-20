@@ -137,6 +137,8 @@ export const translations = {
         sending: "Envoi en cours...",
         success: "Message envoyé !",
         successDesc: "Merci pour votre message. Je vous répondrai dans les plus brefs délais.",
+        error: "Erreur",
+        errorDesc: "Impossible d'envoyer le message. Veuillez réessayer.",
       },
     },
     
@@ -330,6 +332,8 @@ export const translations = {
         sending: "Sending...",
         success: "Message sent!",
         successDesc: "Thank you for your message. I will reply to you as soon as possible.",
+        error: "Error",
+        errorDesc: "Failed to send message. Please try again.",
       },
     },
     
