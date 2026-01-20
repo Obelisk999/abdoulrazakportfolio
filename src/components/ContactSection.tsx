@@ -64,16 +64,37 @@ export const ContactSection = () => {
     e.preventDefault();
     setIsLoading(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
-    toast({
-      title: t.contact.form.success,
-      description: t.contact.form.successDesc,
-    });
+      const data = await response.json();
 
-    setFormData({ name: "", email: "", subject: "", message: "" });
-    setIsLoading(false);
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to send message');
+      }
+
+      toast({
+        title: t.contact.form.success,
+        description: t.contact.form.successDesc,
+      });
+
+      setFormData({ name: "", email: "", subject: "", message: "" });
+    } catch (error) {
+      console.error('Error sending message:', error);
+      toast({
+        title: t.contact.form.error || "Error",
+        description: error instanceof Error ? error.message : t.contact.form.errorDesc || "Failed to send message. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
