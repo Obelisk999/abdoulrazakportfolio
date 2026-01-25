@@ -11,7 +11,8 @@ Si vous remplacez une image (comme `Me3.jpeg`) mais qu'elle ne s'affiche pas sur
 **1. Remplacer l'image**
 ```bash
 # Remplacez le fichier dans src/assets/
-cp /chemin/vers/nouvelle/image.jpg src/assets/Me3.jpeg
+# Note: Assurez-vous que le nom et l'extension correspondent exactement au fichier d'origine
+cp /chemin/vers/nouvelle/Me3.jpeg src/assets/Me3.jpeg
 ```
 
 **2. Vérifier que le build fonctionne**
@@ -71,7 +72,8 @@ If you replace an image (like `Me3.jpeg`) but it doesn't show on the deployed si
 **1. Replace the image**
 ```bash
 # Replace the file in src/assets/
-cp /path/to/new/image.jpg src/assets/Me3.jpeg
+# Note: Ensure the name and extension match exactly the original file
+cp /path/to/new/Me3.jpeg src/assets/Me3.jpeg
 ```
 
 **2. Verify the build works**
