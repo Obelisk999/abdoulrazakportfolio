@@ -93,6 +93,18 @@ The project structure is organized as follows:
 - `/src/hooks` - Custom React hooks
 - `/src/translations` - Multi-language support
 
+### 🖼️ Updating Images
+
+To update your profile image or other assets:
+
+1. Replace the image file in `src/assets/` (e.g., `Me3.jpeg`)
+2. Build the project: `npm run build`
+3. Commit and push to the `main` branch
+4. Wait 2-3 minutes for GitHub Pages deployment
+5. Clear your browser cache: `Ctrl+F5` or `Cmd+Shift+R`
+
+📖 **Detailed Guide:** See [UPDATING_IMAGES.md](./UPDATING_IMAGES.md) for complete instructions and troubleshooting
+
 ## ✨ Features
 
 - Fully responsive design
